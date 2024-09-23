@@ -1,0 +1,74 @@
+:root {
+    --primaryColor: 12, 49, 83;
+    /*0C3153 -- Dark Blue Color*/
+    --secondaryColor: 169, 145, 49;
+    /*A99131* -- Dark Yellow Color*/
+    --tertiaryColor: 235, 184, 28;
+    /*EBB81C -- Bright Yellow Color*/
+    --quaternaryColor: 251, 215, 71;
+    /*FBD747 -- Pale Yellow Color*/
+    --quinaryColor: 0, 82, 164;
+    /*0052A4 -- Bright Blue Color*/
+}
+
+nav.navbar {
+    background: radial-gradient(circle, rgb(0, 0, 0, .05) 50%, transparent 0%) repeat, rgb(var(--primaryColor));
+    background-size: 10px 10px;
+    box-shadow: 0 0 5rem .5rem black;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+a.mainBrand {
+    color: rgb(var(--tertiaryColor));
+    font-size: 2em;
+    font-weight: bolder;
+    text-decoration: none;
+    transition: all .5s;
+}
+
+a.mainBrand:hover {
+    text-shadow: 0 0 1rem rgb(var(--tertiaryColor));
+    transform: scale(.8);
+}
+
+section.jumbotron {
+    color: white;
+    text-shadow: 1px 1px 1px black;
+    position: relative;
+    overflow: hidden;
+}
+
+section.jumbotron::before {
+    content: '';
+    background: url(img/jumbotron.jpg);
+    background-size: cover;
+    background-position: center;
+    filter: blur(5px);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: -1;
+}
+
+section.jumbotron img {
+    filter: drop-shadow(0 0 .5rem black);
+}
+
+section.homework {
+    background-color: rgb(var(--primaryColor));
+}
+
+h1.special-heading {
+    font-family: "Nabla", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "EDPT" 100,
+        "EHLT" 12;
+    margin: -1px 0 1em 0;
+}
